@@ -1,21 +1,23 @@
 <template>
   <div id="app">
 
+    <span>I am</span>
     <div>
-      <b-dropdown id="ddown1" text="I am a" class="m-md-2">
-        <b-dropdown-item>drug addict</b-dropdown-item>
-        <b-dropdown-item>family member</b-dropdown-item>
-      </b-dropdown>
+      <b-form-select v-model="selected" class="m-md-2">
+        <option value="user">a current user of opioids</option>
+        <option value="family">a friend or family member</option>
+      </b-form-select>
     </div>
 
+    <span>seeking</span>
     <div>
-      <b-dropdown id="ddown1" text="seeking" class="m-md-2">
-        <b-dropdown-item>emergency treatment</b-dropdown-item>
-        <b-dropdown-item>helpful information</b-dropdown-item>
-      </b-dropdown>
+      <b-form-select v-model="selected" class="m-md-2">
+        <option value="treatment">emergency treatment</option>
+        <option value="info">helpful information</option>
+      </b-form-select>
     </div>
 
-    <span>for opiate abuse</span>
+    <span>for opiate abuse.</span>
 
     <br/><br/><br/><br/>
     <br/><br/><br/><br/>
