@@ -1,5 +1,33 @@
 <template>
   <div id="app">
+
+    <span>I am a</span>
+
+    <div class="selector">
+      <span> ________ </span>
+      <div class="selection">
+        <p>drug addict</p>
+        <p>family member</p>
+      </div>
+    </div>
+
+    <span>seeking</span>
+
+    <div class="selector">
+      <span> ________ </span>
+      <div class="selection">
+        <p>emergency treatment</p>
+        <p>helpful information</p>
+      </div>
+    </div>
+
+    <span>for opiate abuse</span>
+
+    <br/><br/><br/><br/>
+    <br/><br/><br/><br/>
+    <br/><br/><br/><br/>
+    <br/><br/><br/><br/>
+
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
@@ -24,7 +52,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'msg test'
     }
   }
 }
@@ -36,8 +64,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #dedede;
   margin-top: 60px;
+  background-color: #0c0c0c;
 }
 
 h1, h2 {
@@ -57,4 +86,21 @@ li {
 a {
   color: #42b983;
 }
+
+.selector {
+    position: relative;
+    display: inline-block;
+}
+
+.selection {
+    display: none;
+    position: absolute;
+    min-width: 300px; 
+    z-index: 1;
+}
+
+.selector:hover .selection {
+    display: block;
+}
+
 </style>
