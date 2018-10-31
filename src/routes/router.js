@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import App from './App.vue'
-import FamilyInfo from './views/FamilyInfo.vue'
-import FamilyTreatment from './views/FamilyTreatment.vue'
-import UserInfo from './views/UserInfo.vue'
-import UserTreatment from './views/UserTreatment.vue'
+import FamilyInfo from './FamilyInfo.vue'
+import FamilyTreatment from './FamilyTreatment.vue'
+import UserInfo from './UserInfo.vue'
+import UserTreatment from './UserTreatment.vue'
 
 Vue.use(Router)
 
