@@ -17,7 +17,7 @@
         </b-form>
       </row>
       <row>
-        <router-link v-bind:to="selected.who + '/' + selected.what"> {{ selected.who + "/" + selected.what }} </router-link>
+        <router-link v-bind:to="'/' + selected.who + '/' + selected.what"> {{ selected.who + "/" + selected.what }} </router-link>
         <router-view></router-view>
       </row>
     </b-container>
