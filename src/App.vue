@@ -1,24 +1,18 @@
 <template>
   <div id="app">
 
-    <span>I am a</span>
-
-    <div class="selector">
-      <span> ________ </span>
-      <div class="selection">
-        <p>drug addict</p>
-        <p>family member</p>
-      </div>
+    <div>
+      <b-dropdown id="ddown1" text="I am a" class="m-md-2">
+        <b-dropdown-item>drug addict</b-dropdown-item>
+        <b-dropdown-item>family member</b-dropdown-item>
+      </b-dropdown>
     </div>
 
-    <span>seeking</span>
-
-    <div class="selector">
-      <span> ________ </span>
-      <div class="selection">
-        <p>emergency treatment</p>
-        <p>helpful information</p>
-      </div>
+    <div>
+      <b-dropdown id="ddown1" text="seeking" class="m-md-2">
+        <b-dropdown-item>emergency treatment</b-dropdown-item>
+        <b-dropdown-item>helpful information</b-dropdown-item>
+      </b-dropdown>
     </div>
 
     <span>for opiate abuse</span>
@@ -48,6 +42,12 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue);
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
   name: 'app',
   data () {
@@ -85,22 +85,6 @@ li {
 
 a {
   color: #42b983;
-}
-
-.selector {
-    position: relative;
-    display: inline-block;
-}
-
-.selection {
-    display: none;
-    position: absolute;
-    min-width: 300px; 
-    z-index: 1;
-}
-
-.selector:hover .selection {
-    display: block;
 }
 
 </style>
