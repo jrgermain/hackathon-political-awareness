@@ -1,6 +1,8 @@
 # hackathon-political-awareness
 
-> QCC Hackathon Fall 2018 entry
+Bobconcatenators' QCC Hackathon Fall 2018 entry. A helpful, beautiful website to help the user become more politically aware.
+
+Made by Joseph Germain, Aaron Paterson, and Daron McIntosh
 
 ## Build Setup
 
