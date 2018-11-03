@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-container fluid>
-      <row>
+      <b-row>
         <b-form inline>
           <label>&nbsp;I am a&nbsp;</label>
           <b-select v-model="selected.who" class="m-md-2 bg-dark text-light">
@@ -15,14 +15,17 @@
           </b-select>
           <label>&nbsp;for opiate abuse.&nbsp;</label>
         </b-form>
-      </row>
-      <row>
+      </b-row>
+      <b-row>
         <router-link v-bind:to="'/' + selected.who + '/' + selected.what">
           {{ "/" + selected.who + "/" + selected.what }}
         </router-link>
-        <router-view>
-        </router-view>
-      </row>
+      </b-row>
+      <b-row>
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -36,9 +39,19 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'app',
-  data () {
+  data: function () {
     return {
       selected: { who: null, what: null }
+    }
+  },
+  watch: {
+    'selected.who': function(newSelection) {
+      if(this.selected.what != null)
+        this.$router.push('/' + this.selected.who + '/' + this.selected.what)
+    },
+    'selected.what': function(newSelection) {
+      if(this.selected.who != null)
+        this.$router.push('/' + this.selected.who + '/' + this.selected.what)
     }
   }
 }
@@ -52,12 +65,19 @@ body {
 #app {
   font-family: Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #dedede;
   margin-top: 60px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 h1,

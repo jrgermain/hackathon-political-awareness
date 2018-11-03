@@ -8,7 +8,7 @@
 <script>
 import MapWithMarkers from './MapWithMarkers.vue'
 export default {
-name: 'familyInfo',
+  name: 'familyInfo',
   components: {
     MapWithMarkers
   }
