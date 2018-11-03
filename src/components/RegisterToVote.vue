@@ -23,16 +23,17 @@
         government has a website with voting instructions for every state. Select your
         state to view your state's instructions.
         <div>
-
           <b-dropdown id="ddown" text="Choose Your State" variant="info" class="m-2">
             <b-dropdown-item v-for="(name,abbreviation) in statesArray" v-bind:key="abbreviation" v-bind:value="name" v-bind:href="'https://vote.gov/register/' + abbreviation.toLowerCase() + '/'" target="_blank">
               {{ name }}
             </b-dropdown-item>
           </b-dropdown>
+          <hr>
+          <h5>Three polling stations found in CT: </h5>
+          <map-with-markers></map-with-markers>
         </div>
         <next-page-button go-to="congratulations"></next-page-button>
     </b-jumbotron>
-    <map-with-markers></map-with-markers>
   </div>
 
 </template>
@@ -41,6 +42,11 @@
 import states from '../assets/states.json'
 import NextPageButton from "./NextPageButton.vue";
 import MapWithMarkers from './MapWithMarkers.vue'
+navigator.geolocation.getCurrentPosition(function (location) {
+  console.log(location.coords.latitude);
+  console.log(location.coords.longitude);
+  console.log(location.coords.accuracy);
+});
 export default {
   name: "registerToVote",
   components: { NextPageButton, MapWithMarkers },

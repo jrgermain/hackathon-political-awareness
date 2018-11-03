@@ -1,5 +1,5 @@
 <template>
-  <GmapMap :center="{lat:41.6032, lng:-73.0877}" :zoom="8" map-type-id="roadmap" style="width: 500px; height: 300px">
+  <GmapMap :center="{lat:41.6032, lng:-73.0877}" :zoom="8" map-type-id="roadmap" style="width: 100%; height: 300px">
     <GmapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="true" @click="center=m.position" />
   </GmapMap>
 </template>
