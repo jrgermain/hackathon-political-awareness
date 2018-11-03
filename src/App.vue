@@ -35,7 +35,7 @@ export default {
   name: 'app',
   data () {
     return {
-      selected: {who: null, what: null}
+      selected: { who: null, what: null }
     }
   }
 }
@@ -57,7 +57,8 @@ body {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -74,5 +75,4 @@ li {
 a {
   color: #42b983;
 }
-
 </style>
