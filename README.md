@@ -1,6 +1,6 @@
-# the-opiate-crisis
+# hackathon-political-awareness
 
-> Bobconcatenators CTC 2018 Entry
+> QCC Hackathon Fall 2018 entry
 
 ## Build Setup
 
