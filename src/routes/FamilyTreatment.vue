@@ -1,9 +1,9 @@
 <template>
   <h1> Hello World! </h1>
 </template>
-<script>
 
+<script>
 export default {
-  name: 'familyTreatment',
+  name: 'familyTreatment'
 };
 </script>
